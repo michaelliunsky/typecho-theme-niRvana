@@ -32,7 +32,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
 #### 后台设置
 
-![](http://s-sh-4619-blog.oss.dogecdn.com/settings.png)
+![settings](http://s-sh-4619-blog.oss.dogecdn.com/settings.png)
 
 #### 搜索页面
 
@@ -40,7 +40,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
 请按照如下固定格式配置即可
 
-![](http://s-sh-4619-blog.oss.dogecdn.com/so.png)
+![so](http://s-sh-4619-blog.oss.dogecdn.com/so.png)
 
 #### 图标格式
 
@@ -48,7 +48,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
     icon font_family icon-表上内容
 
-![](http://s-sh-4619-blog.oss.dogecdn.com/icon.png)
+![icon](http://s-sh-4619-blog.oss.dogecdn.com/icon.png)
 
 #### 猜你喜欢
 
