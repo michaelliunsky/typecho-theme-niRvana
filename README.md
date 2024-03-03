@@ -16,7 +16,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
 # 安装
 
-环境要求：**PHP7.4 兼容最佳**
+环境要求：**PHP8.3 兼容最佳**
 在 [Release](https://github.com/michaelliunsky/typecho-theme-niRvana/releases) 页面下载 .zip 文件，上传到/usr/themes 并解压缩，在 typecho 后台找到外观并启用本主题。
 
 # typecho 版相比 Wordpress 版
@@ -57,6 +57,13 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
     <div class="relate-posts clearfix"><div class="post-model"><i class="far fa-star"></i>标题</div><div class="posts clearfix">内容</div></div>
 
 # 更新日志
+
+## 20240303 v1.1
+
+- 适配**PHP8.3**
+- 文章封面图支持**自动获取**
+- 代码全部**格式化**
+- **感谢 typecho.work 对本主题的贡献**
 
 ## 20230822 v1.0
 
