@@ -58,6 +58,11 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
 # 更新日志
 
+## 20240310 v1.2
+
+- **修复**：代码高亮
+- **新增**：文章内 css 美化
+
 ## 20240303 v1.1
 
 - 适配**PHP8.3**
