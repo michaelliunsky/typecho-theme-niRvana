@@ -1,4 +1,4 @@
-![niRvana](https://raw.githubusercontent.com/michaelliunsky/cdn/master/screenshot.png)
+![niRvana](https://cdn.jsdelivr.net/gh/michaelliunsky/cdn@master/screenshot.png)
 
 # typecho-theme-niRvana
 
@@ -32,7 +32,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
 #### 后台设置
 
-![settings](https://raw.githubusercontent.com/michaelliunsky/cdn/master/settings.png)
+![settings](https://cdn.jsdelivr.net/gh/michaelliunsky/cdn@master/settings.png)
 
 #### 搜索页面
 
@@ -40,7 +40,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
 请按照如下固定格式配置即可
 
-![so](https://raw.githubusercontent.com/michaelliunsky/cdn/master/so.png)
+![so](https://cdn.jsdelivr.net/gh/michaelliunsky/cdn@master/so.png)
 
 #### 图标格式
 
@@ -48,7 +48,7 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 
     icon font_family icon-表上内容
 
-![icon](https://raw.githubusercontent.com/michaelliunsky/cdn/master/icon.png)
+![icon](https://cdn.jsdelivr.net/gh/michaelliunsky/cdn@master/icon.png)
 
 #### 猜你喜欢
 
@@ -77,5 +77,5 @@ typecho-Theme-niRvana 移植自 WordPress 版 niRvana 主题。
 # 捐赠
 
 如果你觉得 niRvana 主题不错，可以请我一杯咖啡来支持我的开发。
-![微信捐赠码](https://raw.githubusercontent.com/michaelliunsky/cdn/master/wechat.jpg)
-![支付宝捐赠码](https://raw.githubusercontent.com/michaelliunsky/cdn/master/alipay.jpg)
+![微信捐赠码](https://cdn.jsdelivr.net/gh/michaelliunsky/cdn@master/wechat.jpg)
+![支付宝捐赠码](https://cdn.jsdelivr.net/gh/michaelliunsky/cdn@master/alipay.jpg)
