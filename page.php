@@ -2,12 +2,17 @@
 <html lang="zh-CN">
 
 <head>
-    <title><?php if($this->fields->biaoti) {
+    <title><?php if ($this->fields->biaoti) {
         echo $this->fields->biaoti.' | ';
-    } ?><?php $this->options->title() ?></title><?php if($this->fields->guanjianci): ?>
-    <meta name="keywords" content="<?php $this->fields->guanjianci(); ?>" /><?php endif; ?>
-    <?php if($this->fields->miaoshu): ?>
-    <meta name="description" content="<?php $this->fields->miaoshu(); ?>" /><?php endif; ?>
+    } ?><?php $this->options->title() ?></title>
+    <?php if ($this->fields->guanjianci): ?>
+    <meta name="keywords"
+        content="<?php $this->fields->guanjianci(); ?>" />
+    <?php endif; ?>
+    <?php if ($this->fields->miaoshu): ?>
+    <meta name="description"
+        content="<?php $this->fields->miaoshu(); ?>" />
+    <?php endif; ?>
     <?php include('head.php'); ?>
 </head>
 
@@ -25,7 +30,7 @@
                         <div class="page">
                             <div class="container flex-row-middle coverflow">
                                 <div class="content flex-column-middle" style="width: 100%;">
-                                    <h1><?php if($this->fields->biaoti) {
+                                    <h1><?php if ($this->fields->biaoti) {
                                         $this->fields->biaoti();
                                     } else {
                                         $this->options->title();
@@ -35,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="imgColor" style="background:url(<?php if($this->fields->pic) {
+                <div class="imgColor" style="background:url(<?php if ($this->fields->pic) {
                     $this->fields->pic();
                 } else {
                     showThumbnail($this);

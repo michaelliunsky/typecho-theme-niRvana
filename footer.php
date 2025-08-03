@@ -11,10 +11,8 @@
         </div>
         <div class="beian">
             <?php $this->options->dibux(); ?>
-        </div><a href="https://blog.mkliu.top" id="banquan">
-            <div class="copyright silver-color">Theme niRvana By michaelliunsky
-            </div>
-        </a>
+        </div>
+        <div class="copyright silver-color">Theme <strong>niRvana</strong> By <a href="https://blog.mkliu.top/" target="_blank"><span>michaelliunsky</span></a></div>
     </div>
 </footer>
 </div>
@@ -25,23 +23,35 @@
 <script src="https://jsd.onmicrosoft.cn/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('js.js'); ?>"></script>
 </body>
-<script>$('body').on('click', 'a', function () {
-        var href = $(this).attr('href');
-        if (!href || /^(javascript:)|#/.test(href)) return;
-        loading();
-        setTimeout(window.location.href = href, 300);
-        return false;
-    });
-    function openload() {
-        var p1 = document.getElementById("p1");
-        p1.className = "pageLoader flex-row-middle flex-center";
+<script>
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        closeload();
     }
-    function closeload() {
-        var p1 = document.getElementById("p1");
-        p1.className = "pageLoader flex-row-middle flex-center noload";
+});
+(function checkReferrer() {
+    try {
+        const currentDomain = window.location.hostname;
+        let referrerDomain = '';
+        if (document.referrer) {
+            referrerDomain = new URL(document.referrer).hostname;
+        }
+        if (referrerDomain === currentDomain) {
+            openload();
+        }
+    } catch (e) {
+        console.log("Referrer check error:", e);
     }
-    function loading() {
-        var p1 = document.getElementById("p1");
-        p1.className = "pageLoader flex-row-middle flex-center";
-    }
-    window.onload = setTimeout(closeload, 300);</script>
+})();
+function openload() {
+    const p1 = document.getElementById("p1");
+    p1.className = "pageLoader flex-row-middle flex-center";
+}
+function closeload() {
+    const p1 = document.getElementById("p1");
+    p1.className = "pageLoader flex-row-middle flex-center noload";
+}
+window.onload = function() {
+    setTimeout(closeload, 300);
+};
+</script>

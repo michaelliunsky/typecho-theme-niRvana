@@ -60,13 +60,13 @@ function showThumbnail($widget, $type = 0)
     $name = md5($widget->cid);
     $file1 = ".".__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.webp';
     $file2 = ".".__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.jpg';
-    if(file_exists($file1)) {
+    if (file_exists($file1)) {
         $img = Helper::options()->rootUrl.__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.webp?'.filemtime($file1);
-    } elseif(file_exists($file2)) {
+    } elseif (file_exists($file2)) {
         $img = Helper::options()->rootUrl.__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.jpg?'.filemtime($file2);
-    } elseif($widget->fields->thumb) {
+    } elseif ($widget->fields->thumb) {
         $img = $widget->fields->thumb;
-    } elseif($widget->fields->img) {
+    } elseif ($widget->fields->img) {
         $img = $widget->fields->img;
     } elseif ($t && strpos($thumbUrl[1][0], 'icon.png') == false && strpos($thumbUrl[1][0], 'alipay') == false && strpos($thumbUrl[1][0], 'wechat') == false) {
         $img = $thumbUrl[1][0];
@@ -74,18 +74,44 @@ function showThumbnail($widget, $type = 0)
         $img = $attach->url;
     }
 
-    if($type == 0) {
-        if($img == $random) {
+    if ($type == 0) {
+        if ($img == $random) {
             echo $img;
         } else {
             echo $img.Helper::options()->thumbnail;
         }
     } else {
-        if($img == $random) {
+        if ($img == $random) {
             return $img;
         } else {
             return $img.Helper::options()->thumbnail;
         }
     }
 
+}
+function themeInit($archive)
+{
+    Helper::options()->commentsPageDisplay = 'first';
+    Helper::options()->commentsOrder = 'DESC';
+    Helper::options()->commentsMaxNestingLevels = 999;
+}
+function get_comment_at($coid)
+{
+    $db   = Typecho_Db::get();
+    $prow = $db->fetchRow($db->select('parent')->from('table.comments')
+                                 ->where('coid = ?', $coid));
+    $parent = $prow['parent'];
+    if (!empty($parent)) {
+        $arow = $db->fetchRow($db->select('author')->from('table.comments')
+                                     ->where('coid = ? AND status = ?', $parent, 'approved'));
+        if (!empty($arow['author'])) {
+            $author = $arow['author'];
+            $href   = '<span class="reply">@<a href="#comment-' . $parent . '">' . $author . '</a></span>';
+            return $href;
+        } else {
+            return '';
+        }
+    } else {
+        return '';
+    }
 }

@@ -9,9 +9,12 @@
 <html lang="zh-CN">
 
 <head>
-    <title><?php $this->fields->biaoti(); ?> | <?php $this->options->title() ?></title>
-    <meta name="keywords" content="<?php $this->fields->guanjianci(); ?>" />
-    <meta name="description" content="<?php $this->fields->miaoshu(); ?>" />
+    <title><?php $this->fields->biaoti(); ?> |
+        <?php $this->options->title() ?></title>
+    <meta name="keywords"
+        content="<?php $this->fields->guanjianci(); ?>" />
+    <meta name="description"
+        content="<?php $this->fields->miaoshu(); ?>" />
     <?php include('head.php'); ?>
 </head>
 
@@ -26,7 +29,8 @@
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                     <div class="categoryNav-wrapper" style="width: 100%;">
-                        <div pandatab="" class="categoryNav" active-class=".current-menu-item,.current-menu-ancestor" sub-class=".sub-menu">
+                        <div pandatab="" class="categoryNav" active-class=".current-menu-item,.current-menu-ancestor"
+                            sub-class=".sub-menu">
                             <ul id="menu-cattab" class="menu">
                                 <li class="anchor" style="position: absolute; left: 0px; width: 78px; opacity: 1;"></li>
                                 <?php include('menu.php'); ?>

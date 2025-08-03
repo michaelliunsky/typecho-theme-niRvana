@@ -9,9 +9,12 @@
 <html lang="zh-CN">
 
 <head>
-    <title><?php $this->fields->biaoti(); ?> | <?php $this->options->title() ?></title>
-    <meta name="keywords" content="<?php $this->fields->guanjianci(); ?>" />
-    <meta name="description" content="<?php $this->fields->miaoshu(); ?>" />
+    <title><?php $this->fields->biaoti(); ?> |
+        <?php $this->options->title() ?></title>
+    <meta name="keywords"
+        content="<?php $this->fields->guanjianci(); ?>" />
+    <meta name="description"
+        content="<?php $this->fields->miaoshu(); ?>" />
     <?php include('head.php'); ?>
 </head>
 
@@ -29,13 +32,16 @@
                         <div class="page">
                             <div class="container flex-row-middle coverflow">
                                 <div class="content flex-column-middle" style="width: 100%;">
-                                    <h1><?php $this->fields->biaoti(); ?></h1>
+                                    <h1><?php $this->fields->biaoti(); ?>
+                                    </h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="imgColor" style="background:url(<?php $this->fields->pic(); ?>) no-repeat;background-size:cover;background-position: center"></div>
+                <div class="imgColor"
+                    style="background:url(<?php $this->fields->pic(); ?>) no-repeat;background-size:cover;background-position: center">
+                </div>
             </div>
         </div>
         <div class="container postListsModel">
