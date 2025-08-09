@@ -53,9 +53,10 @@ function showThumbnail($widget, $type = 0)
     $pattern = '/\<img.*?\ssrc\=\"(.*?)\"[^>]*>/i';
     $attach = $widget->widget('Widget_Contents_Attachment_Related@' . $widget->cid . '-' . uniqid(), array(
             'parentId'  => $widget->cid,'limit'     => 1,'offset'    => 0))->attachment;
-    $t = preg_match_all($pattern, $widget->markdown($widget->text), $thumbUrl);
+    $content = $widget->content ?? '';
+    $thumbUrl = [];
+    $t = preg_match_all($pattern, $content, $thumbUrl);
     $img = $random;
-
 
     $name = md5($widget->cid);
     $file1 = ".".__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.webp';
@@ -64,13 +65,13 @@ function showThumbnail($widget, $type = 0)
         $img = Helper::options()->rootUrl.__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.webp?'.filemtime($file1);
     } elseif (file_exists($file2)) {
         $img = Helper::options()->rootUrl.__TYPECHO_PLUGIN_DIR__."/Thumb/uploads/".$name.'.jpg?'.filemtime($file2);
-    } elseif ($widget->fields->thumb) {
+    } elseif ($widget->fields && $widget->fields->thumb) {
         $img = $widget->fields->thumb;
-    } elseif ($widget->fields->img) {
+    } elseif ($widget->fields && $widget->fields->img) {
         $img = $widget->fields->img;
-    } elseif ($t && strpos($thumbUrl[1][0], 'icon.png') == false && strpos($thumbUrl[1][0], 'alipay') == false && strpos($thumbUrl[1][0], 'wechat') == false) {
+    } elseif ($t && isset($thumbUrl[1][0]) && strpos($thumbUrl[1][0], 'icon.png') == false && strpos($thumbUrl[1][0], 'alipay') == false && strpos($thumbUrl[1][0], 'wechat') == false) {
         $img = $thumbUrl[1][0];
-    } elseif (@$attach->isImage) {
+    } elseif ($attach && $attach->isImage) {
         $img = $attach->url;
     }
 

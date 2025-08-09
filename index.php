@@ -3,7 +3,7 @@
  * 作品展示模板，适用于设计稿、摄影、图片新闻等以图片为中心的展示.
  * @package niRvana
  * @author michaelliunsky
- * @version 2.0
+ * @version 2.1
  * @link https://blog.mkliu.top
  */
 ?>
