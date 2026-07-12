@@ -4,7 +4,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 }
 
 if (!defined('__TYPECHO_GRAVATAR_PREFIX__')) {
-    define('__TYPECHO_GRAVATAR_PREFIX__', 'https://cravatar.cn/avatar/');
+    define('__TYPECHO_GRAVATAR_PREFIX__', 'https://cdn.sep.cc/avatar/');
 }
 
 $sandbox_comment_alt = 1;
@@ -54,7 +54,7 @@ function threadedComments($comments, $options)
     ?>">
         <div id="div-comment-<?php $comments->coid(); ?>" class="comment-body clearfix">
             <?php if ($options->avatarSize): ?>
-                <?php $comments->gravatar($options->avatarSize); ?>
+                <?php $comments->gravatar($options->avatarSize, 'mm'); ?>
             <?php endif; ?>
 
             <div class="comment-author vcard">

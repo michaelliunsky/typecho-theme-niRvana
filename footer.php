@@ -20,7 +20,6 @@
     <div class="tool-button backToTop unavailable" @click="this.backToTop()" style="transform: rotate(-45deg)"><i class="icon font_family icon-rocket"></i></div>
 </div>
 </div>
-<script src="https://jsd.onmicrosoft.cn/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('js.js'); ?>"></script>
 </body>
 <script>

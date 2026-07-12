@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="imgColor" style="background:url(<?php showThumbnail($this); ?>) no-repeat;-webkit-filter: blur(50px);-moz-filter: blur(50px);-ms-filter: blur(50px);filter: blur(50px);transform: scale(1.2);background-size:cover;background-position: center;"></div>
+                <div class="imgColor" style="background:url(<?php showThumbnail($this); ?>) no-repeat;-webkit-filter: blur(10px) saturate(.85) brightness(.87);filter: blur(10px) saturate(.85) brightness(.87);transform: scale(1.12);background-size:cover;background-position: center;"></div>
             </div>
         </div>
 
